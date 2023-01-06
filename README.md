@@ -19,7 +19,7 @@ This project was mainly created to practice the basics of using an API. I didn't
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Sengsith/pokemon-api-practice)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://celadon-kulfi-1563c7.netlify.app/)
 
 ### Built with
 
