@@ -26,13 +26,24 @@ const Pokemon = (props) => {
     for( const move of pokeData.moves) {
       const response = await fetch(move.move.url);
       const data = await response.json();
-      newArr.push({
-        name: move.move.name,
-        accuracy: data.accuracy,
-        power: data.power,
-        pp: data.pp,
-        effect: data.effect_entries[0].effect
-      });
+      if (data.effect_entries.length === 0) {
+        newArr.push({
+          name: move.move.name,
+          accuracy: data.accuracy,
+          power: data.power,
+          pp: data.pp,
+          effect: 'No effect.'
+        });
+      }
+      else {
+        newArr.push({
+          name: move.move.name,
+          accuracy: data.accuracy,
+          power: data.power,
+          pp: data.pp,
+          effect: data.effect_entries[0].effect
+        });
+      }
     }
     setMoves(newArr);
   }

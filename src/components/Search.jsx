@@ -1,7 +1,7 @@
 import { React, useRef } from 'react';
 
 const Search = (props) => {
-  const {setPokeData } = props;
+  const { setPokeData } = props;
   const searchRef = useRef(null);
 
   // API call for searched pokemon
